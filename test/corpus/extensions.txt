@@ -1,0 +1,322 @@
+=============
+Accessibility
+=============
+
+Box {
+  accessibility {
+    label: "Hello, World!";
+    checked: true;
+  }
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_accessibility
+        name: (ident)
+        value: (value
+          (literal
+           (quoted)))
+        name: (ident)
+        value: (value
+          (literal
+            (ident)))))))
+
+==============
+Libadwaita dialog
+==============
+
+Adw.AlertDialog {
+  responses [
+    cancel: "Cancel",
+    delete: "Delete" destructive,
+    save: "Save" suggested,
+    wipeHardDrive: "Wipe Hard Drive" destructive disabled,
+  ]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      namespace: (ident)
+      name: (ident))
+    content: (object_content
+      (ext_adw_dialog
+        (ext_adw_dialog_response
+          id: (ident)
+          value: (string_value
+            (quoted)))
+        (ext_adw_dialog_response
+          id: (ident)
+          value: (string_value
+            (quoted))
+          flags: (ident))
+        (ext_adw_dialog_response
+          id: (ident)
+          value: (string_value
+            (quoted))
+          flags: (ident))
+        (ext_adw_dialog_response
+          id: (ident)
+          value: (string_value
+            (quoted))
+          flags: (ident)
+          flags: (ident))))))
+
+======================
+Libadwaita breakpoints
+======================
+
+Adw.Breakpoint {
+  condition ("max-width: 600px")
+  setters {
+    label.label: _("Hello, world!");
+    label.visible: false;
+    label.extra-menu: null;
+  }
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      namespace: (ident)
+      name: (ident))
+    content: (object_content
+      (ext_adw_breakpoint_condition
+        condition: (quoted))
+      (ext_adw_breakpoint
+        object: (ident)
+        property: (ident)
+        value: (value
+          (translated
+            (quoted)))
+        object: (ident)
+        property: (ident)
+        value: (value
+          (literal
+            (ident)))
+        object: (ident)
+        property: (ident)
+        value: (value
+          (literal
+            (ident)))))))
+
+========
+ComboBox
+========
+
+ComboBoxText {
+  items [
+    item1: "Item 1",
+    "Item 2",
+    item3: "Item 3",
+  ]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_combo_box_items
+        id: (ident)
+        value: (string_value
+          (quoted))
+        value: (string_value
+          (quoted))
+        id: (ident)
+        value: (string_value
+          (quoted))))))
+
+====================
+FileFilter mime-type
+====================
+
+FileFilter {
+  mime-types ["text/plain", "image/*"]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_file_filter_mime_types
+        item: (quoted)
+        item: (quoted)))))
+
+===================
+FileFilter patterns
+===================
+
+FileFilter {
+  patterns ["*.txt"]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_file_filter_patterns
+        item: (quoted)))))
+
+===================
+FileFilter suffixes
+===================
+
+FileFilter {
+  suffixes ["png"]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_file_filter_suffixes
+        item: (quoted)))))
+
+==============
+Widget layouts
+==============
+
+Button {
+  layout {
+    column: 0;
+    row: 0;
+  }
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_layout
+        name: (ident)
+        value: (value
+          (literal
+            (number)))
+        name: (ident)
+        value: (value
+          (literal
+            (number)))))))
+
+================================
+BuilderListItemFactory templates
+================================
+
+ListView {
+  factory: BuilderListItemFactory {
+    template ListItem {
+      child: Label {
+      };
+    }
+  };
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (object_value
+          (object
+            name: (type_name
+              (ident))
+            content: (object_content
+              (ext_list_item_factory
+                name: (type_name
+                  (ident))
+                content: (object_content
+                  (property
+                    name: (ident)
+                    value: (object_value
+                      (object
+                        name: (type_name
+                          (ident))
+                        content: (object_content)))))))))))))
+
+=================
+SizeGroup widgets
+=================
+
+SizeGroup {
+  widgets [button1, button2]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_size_group_widgets
+        id: (ident)
+        id: (ident)))))
+
+==================
+StringList strings
+==================
+
+StringList {
+  strings ["violin", "guitar", _("harp")]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_string_list_strings
+        (string_value
+          (quoted))
+        (string_value
+          (quoted))
+        (string_value
+          (translated
+            (quoted)))))))
+
+==========
+CSS styles
+==========
+
+Button {
+  styles ["suggested-action"]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_styles
+        name: (quoted)))))

@@ -1,0 +1,77 @@
+=====
+Basic
+=====
+
+T {
+  clicked => $on_button_clicked();
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (signal
+        name: (ident)
+	handler: (ident)))))
+
+===========
+With detail
+===========
+
+T {
+  clicked::a => $on_button_clicked();
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (signal
+        name: (ident)
+        detail: (ident)
+	handler: (ident)))))
+
+===========
+With flags
+===========
+
+T {
+  clicked => $on_button_clicked() swapped;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (signal
+        name: (ident)
+	handler: (ident)))))
+
+===========
+With all
+===========
+
+T {
+  clicked::detail => $on_button_clicked() swapped after;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (signal
+        name: (ident)
+        detail: (ident)
+	handler: (ident)))))

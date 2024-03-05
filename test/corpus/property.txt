@@ -1,0 +1,304 @@
+===========
+Basic ident
+===========
+
+Box {
+  orientation: vertical;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (ident)))))))
+
+============
+Basic string
+============
+
+Box {
+  title: "something value";
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (quoted)))))))
+
+=======================
+Basic translated string
+=======================
+
+Box {
+  title: _("something value");
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (value
+          (translated
+            (quoted)))))))
+
+====================================
+Basic translated string with context
+====================================
+
+Box {
+  title: C_("context", "something value");
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (value
+          (translated
+            context: (quoted)
+	    string: (quoted)))))))
+
+============
+Basic number
+============
+
+Box {
+  spacing: 12;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number)))))))
+
+==============
+Typeof literal
+==============
+
+Box {
+  item-type: typeof<GObject.Object>;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (type_name
+              namespace: (ident)
+              name: (ident))))))))
+
+============
+Basic flags
+============
+
+Box {
+  spacing: flag1 | flag2;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (value
+          (ident)
+          (ident))))))
+
+=============
+Basic binding
+=============
+
+Box {
+  spacing: bind 12;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (binding
+          (literal
+            (number)))))))
+
+==================
+Binding with flags
+==================
+
+Box {
+  spacing: bind 12 inverted;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (binding
+          (literal
+            (number)))))))
+
+===========================
+Binding with multiple flags
+===========================
+
+Box {
+  spacing: bind 12 inverted bidirectional sync-create;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (binding
+          (literal
+            (number)))))))
+
+===============================
+Binding with closure expression
+===============================
+
+Box {
+  spacing: bind $closure();
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (binding
+          (closure_expression
+            name: (ident)))))))
+
+============================
+Binding with cast expression
+============================
+
+Box {
+  title: bind $closure() as <string>;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (binding
+          (closure_expression
+            name: (ident))
+          (cast_expression
+            (type_name
+              (ident))))))))
+
+==============================
+Binding with lookup expression
+==============================
+
+Box {
+  title: bind Window.name;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (binding
+          (literal
+            (ident))
+          (lookup_expression
+            (ident)))))))
+
+======
+Object
+======
+
+Box {
+  child: Box {
+  };
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (object_value
+          (object
+            name: (type_name
+              (ident))
+            content: (object_content)))))))

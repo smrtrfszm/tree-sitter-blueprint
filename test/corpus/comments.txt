@@ -1,0 +1,160 @@
+============
+Line comment
+============
+
+// some text
+
+---
+
+(source_file
+  (comment))
+
+=============
+Block comment
+=============
+
+/* some text */
+
+---
+
+(source_file
+  (comment))
+
+======================
+Line comment in object
+======================
+
+Box {
+  // some text
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (comment))))
+
+=======================
+Block comment in object
+=======================
+
+Box {
+  /* some text */
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (comment))))
+
+===========================
+Line comment after property
+===========================
+
+Box {
+  title: "title"; // some text
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+	value: (value
+	  (literal
+	    (quoted))))
+      (comment))))
+
+============================
+Block comment after property
+============================
+
+Box {
+  title: "title"; /* some text */
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+	value: (value
+	  (literal
+	    (quoted))))
+      (comment))))
+
+=============================
+Block comment before property
+=============================
+
+Box {
+  /* some text */ title: "title";
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (comment)
+      (property
+        name: (ident)
+	value: (value
+	  (literal
+	    (quoted)))))))
+
+============================
+Line comment before property
+============================
+
+Box {
+  // some text title: "title";
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (comment))))
+
+=========================
+Asterisk in block comment
+=========================
+
+/* * */
+
+---
+
+(source_file
+  (comment))
+
+===============================
+Slash asterisk in block comment
+===============================
+
+/* /* */
+
+---
+
+(source_file
+  (comment))

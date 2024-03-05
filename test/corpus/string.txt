@@ -1,0 +1,83 @@
+=========================
+String with single quotes
+=========================
+
+Box {
+  title: 'some value';
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+	value: (value
+	  (literal
+	    (quoted)))))))
+
+=========================
+String with double quotes
+=========================
+
+Box {
+  title: "some value";
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+	value: (value
+	  (literal
+	    (quoted)))))))
+
+=================================
+String with escaped single quotes
+=================================
+
+Box {
+  title: 'some \'value';
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+	value: (value
+	  (literal
+	    (quoted)))))))
+
+=================================
+String with escaped double quotes
+=================================
+
+Box {
+  title: "some \"value";
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+	value: (value
+	  (literal
+	    (quoted)))))))

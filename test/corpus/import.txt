@@ -1,0 +1,29 @@
+=============
+Basic import
+=============
+
+using Gtk 4.0;
+
+---
+
+(source_file
+  (using
+    namespace: (ident)
+    version: (number)))
+
+================
+Multiple import
+================
+
+using Gtk 4.0;
+using Adw 1;
+
+---
+
+(source_file
+  (using
+    namespace: (ident)
+    version: (number))
+  (using
+    namespace: (ident)
+    version: (number)))

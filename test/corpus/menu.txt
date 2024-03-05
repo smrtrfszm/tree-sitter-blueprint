@@ -1,0 +1,17 @@
+=====
+Basic
+=====
+
+using Gtk 4.0;
+
+menu my_menu {
+}
+
+---
+
+(source_file
+  (using
+		namespace: (ident)
+		version: (number))
+	(menu
+		id: (ident)))

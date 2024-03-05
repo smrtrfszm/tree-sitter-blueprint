@@ -1,0 +1,84 @@
+===============
+With short name
+===============
+
+using Gtk 4.0;
+
+template Name {
+}
+
+---
+
+(source_file
+  (using
+    namespace: (ident)
+    version: (number))
+  (template
+    name: (type_name
+      (ident))
+    content: (object_content)))
+
+==================
+With external name
+==================
+
+using Gtk 4.0;
+
+template $Name {
+}
+
+---
+
+(source_file
+  (using
+    namespace: (ident)
+    version: (number))
+  (template
+    name: (type_name
+      (ident))
+    content: (object_content)))
+
+========================
+Subclass with short name
+========================
+
+using Gtk 4.0;
+
+template Name : Subclass {
+}
+
+---
+
+(source_file
+  (using
+    namespace: (ident)
+    version: (number))
+  (template
+    name: (type_name
+      (ident))
+    subclass: (type_name
+      (ident))
+    content: (object_content)))
+
+=======================
+Subclass with full name
+======================
+
+using Gtk 4.0;
+
+template Name : Namespace.Name {
+}
+
+---
+
+(source_file
+  (using
+    namespace: (ident)
+    version: (number))
+  (template
+    name: (type_name
+      (ident))
+    subclass: (type_name
+      namespace: (ident)
+      name: (ident))
+    content: (object_content)))

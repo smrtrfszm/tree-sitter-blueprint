@@ -1,0 +1,66 @@
+===========
+Basic child
+===========
+
+Box {
+  Box {
+  }
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (object
+        name: (type_name
+          (ident))
+        content: (object_content)))))
+
+===========
+Child types
+===========
+
+HeaderBar {
+  [start]
+  Label {
+  }
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      child_type: (ident)
+      (object
+        name: (type_name
+          (ident))
+        content: (object_content)))))
+
+=================
+Internal children
+=================
+
+Dialog {
+  [internal-child content_area]
+  Box {
+  }
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ident)
+      (object
+        name: (type_name
+          (ident))
+        content: (object_content)))))
