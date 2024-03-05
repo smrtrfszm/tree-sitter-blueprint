@@ -176,8 +176,7 @@ module.exports = grammar({
         '[',
         choice(
           seq('internal-child', $.ident),
-          // TODO: implement
-          // $.child_extension,
+          $.child_extension,
           field('child_type', $.ident),
         ),
         ']',
@@ -441,6 +440,21 @@ module.exports = grammar({
       '[',
       repeat(field('name', $.quoted)),
       ']',
+    ),
+
+    child_extension: $ => choice(
+      $.ext_response,
+    ),
+
+    ext_response: $ => seq(
+      'action',
+      'response',
+      '=',
+      choice(
+        field('name', $.ident),
+        field('id', $.number),
+      ),
+      optional('default'),
     ),
   }
 })

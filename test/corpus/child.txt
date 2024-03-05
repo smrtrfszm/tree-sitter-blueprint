@@ -64,3 +64,47 @@ Dialog {
         name: (type_name
           (ident))
         content: (object_content)))))
+
+============================
+Dialog and InfoBar responses
+============================
+
+Dialog {
+  [action response=ok default]
+  Button {}
+
+  [action response=cancel]
+  Button {}
+
+  [action response=1]
+  Button {}
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (child_extension
+        (ext_response
+          name: (ident)))
+      (object
+        name: (type_name
+          (ident))
+        content: (object_content))
+      (child_extension
+        (ext_response
+          name: (ident)))
+      (object
+        name: (type_name
+          (ident))
+        content: (object_content))
+      (child_extension
+        (ext_response
+          id: (number)))
+      (object
+        name: (type_name
+          (ident))
+        content: (object_content)))))
