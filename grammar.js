@@ -456,7 +456,7 @@ module.exports = grammar({
     ext_styles: $ => seq(
       'styles',
       '[',
-      repeat(field('name', $.quoted)),
+      delimited(field('name', $.quoted), ','),
       ']',
     ),
 
@@ -476,3 +476,15 @@ module.exports = grammar({
     ),
   }
 })
+
+function delimited(item, delimiter) {
+  return optional(seq(
+    item,
+    repeat(seq(
+      delimiter,
+      item,
+    )),
+    optional(delimiter),
+  ))
+}
+

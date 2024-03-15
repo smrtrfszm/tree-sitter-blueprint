@@ -320,3 +320,40 @@ Button {
     content: (object_content
       (ext_styles
         name: (quoted)))))
+
+===================
+Multiple CSS styles
+===================
+
+Button {
+  styles ["a", "b"]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_styles
+        name: (quoted)
+	name: (quoted)))))
+
+=========================
+CSS styles trailing comma
+=========================
+
+Button {
+  styles ["a",]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_styles
+	name: (quoted)))))
