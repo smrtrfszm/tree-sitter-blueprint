@@ -939,6 +939,10 @@
           "named": true
         },
         {
+          "type": "translation_domain",
+          "named": true
+        },
+        {
           "type": "using",
           "named": true
         }
@@ -1038,6 +1042,22 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "translation_domain",
+    "named": true,
+    "fields": {
+      "domain": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "quoted",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -1327,6 +1347,10 @@
   },
   {
     "type": "template",
+    "named": false
+  },
+  {
+    "type": "translation-domain",
     "named": false
   },
   {

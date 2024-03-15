@@ -1,0 +1,17 @@
+==================
+Translation domain
+==================
+
+using Gtk 4.0;
+
+translation-domain "test";
+
+---
+
+(source_file
+  (using
+    namespace: (ident)
+    version: (number))
+  (translation_domain
+    domain: (quoted)))
+

@@ -9,6 +9,7 @@ module.exports = grammar({
   rules: {
     source_file: $ => seq(
       repeat($.using),
+      optional($.translation_domain),
       repeat(choice(
         prec(3, $.template),
         prec(2, $.menu),
@@ -59,6 +60,12 @@ module.exports = grammar({
       field('namespace', $.ident),
       field('version', $.number),
       ';'
+    ),
+
+    translation_domain: $ => seq(
+      'translation-domain',
+      field('domain', $.quoted),
+      ';',
     ),
 
     template: $ => seq(
