@@ -33,7 +33,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (comment))))
 
@@ -50,7 +50,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (comment))))
 
@@ -67,7 +67,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -89,7 +89,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -111,7 +111,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (comment)
       (property
@@ -133,7 +133,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (comment))))
 

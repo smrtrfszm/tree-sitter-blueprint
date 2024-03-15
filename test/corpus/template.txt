@@ -15,7 +15,7 @@ template Name {
     version: (number))
   (template
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content)))
 
 ==================
@@ -35,7 +35,7 @@ template $Name {
     version: (number))
   (template
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content)))
 
 ========================
@@ -55,9 +55,9 @@ template Name : Subclass {
     version: (number))
   (template
     name: (type_name
-      (ident))
+      name: (ident))
     subclass: (type_name
-      (ident))
+      name: (ident))
     content: (object_content)))
 
 =======================
@@ -77,7 +77,7 @@ template Name : Namespace.Name {
     version: (number))
   (template
     name: (type_name
-      (ident))
+      name: (ident))
     subclass: (type_name
       namespace: (ident)
       name: (ident))

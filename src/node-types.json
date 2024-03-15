@@ -1096,7 +1096,7 @@
     "fields": {
       "name": {
         "multiple": false,
-        "required": false,
+        "required": true,
         "types": [
           {
             "type": "ident",
@@ -1114,16 +1114,6 @@
           }
         ]
       }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "ident",
-          "named": true
-        }
-      ]
     }
   },
   {

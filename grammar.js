@@ -51,8 +51,8 @@ module.exports = grammar({
         '.',
         field('name', $.ident)
       ),
-      seq('$', $.ident),
-      $.ident,
+      seq('$', field('name', $.ident)),
+      field('name', $.ident),
     ),
 
     using: $ => seq(

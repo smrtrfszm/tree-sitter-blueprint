@@ -12,11 +12,11 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (object
         name: (type_name
-          (ident))
+          name: (ident))
         content: (object_content)))))
 
 ===========
@@ -34,12 +34,12 @@ HeaderBar {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       child_type: (ident)
       (object
         name: (type_name
-          (ident))
+          name: (ident))
         content: (object_content)))))
 
 =================
@@ -57,12 +57,12 @@ Dialog {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ident)
       (object
         name: (type_name
-          (ident))
+          name: (ident))
         content: (object_content)))))
 
 ============================
@@ -85,26 +85,26 @@ Dialog {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (child_extension
         (ext_response
           name: (ident)))
       (object
         name: (type_name
-          (ident))
+          name: (ident))
         content: (object_content))
       (child_extension
         (ext_response
           name: (ident)))
       (object
         name: (type_name
-          (ident))
+          name: (ident))
         content: (object_content))
       (child_extension
         (ext_response
           id: (number)))
       (object
         name: (type_name
-          (ident))
+          name: (ident))
         content: (object_content)))))

@@ -14,7 +14,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_accessibility
         name: (ident)
@@ -126,7 +126,7 @@ ComboBoxText {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_combo_box_items
         id: (ident)
@@ -151,7 +151,7 @@ FileFilter {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_file_filter_mime_types
         item: (quoted)
@@ -170,7 +170,7 @@ FileFilter {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_file_filter_patterns
         item: (quoted)))))
@@ -188,7 +188,7 @@ FileFilter {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_file_filter_suffixes
         item: (quoted)))))
@@ -209,7 +209,7 @@ Button {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_layout
         name: (ident)
@@ -239,25 +239,25 @@ ListView {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
         value: (object_value
           (object
             name: (type_name
-              (ident))
+              name: (ident))
             content: (object_content
               (ext_list_item_factory
                 name: (type_name
-                  (ident))
+                  name: (ident))
                 content: (object_content
                   (property
                     name: (ident)
                     value: (object_value
                       (object
                         name: (type_name
-                          (ident))
+                          name: (ident))
                         content: (object_content)))))))))))))
 
 ===========
@@ -277,7 +277,7 @@ Scale {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_scale_marks
         (ext_scale_mark
@@ -305,7 +305,7 @@ SizeGroup {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_size_group_widgets
         id: (ident)
@@ -324,7 +324,7 @@ StringList {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_string_list_strings
         (string_value
@@ -348,7 +348,7 @@ Button {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_styles
         name: (quoted)))))
@@ -366,7 +366,7 @@ Button {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_styles
         name: (quoted)
@@ -385,7 +385,7 @@ Button {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (ext_styles
 	name: (quoted)))))

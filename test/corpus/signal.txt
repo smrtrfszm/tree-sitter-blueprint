@@ -11,7 +11,7 @@ T {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (signal
         name: (ident)
@@ -30,7 +30,7 @@ T {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (signal
         name: (ident)
@@ -50,7 +50,7 @@ T {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (signal
         name: (ident)
@@ -69,7 +69,7 @@ T {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (signal
         name: (ident)

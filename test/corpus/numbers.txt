@@ -19,7 +19,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)

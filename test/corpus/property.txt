@@ -11,7 +11,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -32,7 +32,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -53,7 +53,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -74,7 +74,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -96,7 +96,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -117,7 +117,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -140,7 +140,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -161,7 +161,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -182,7 +182,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -203,7 +203,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -224,7 +224,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -245,7 +245,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -254,7 +254,7 @@ Box {
             name: (ident))
           (cast_expression
             (type_name
-              (ident))))))))
+              name: (ident))))))))
 
 ==============================
 Binding with lookup expression
@@ -269,7 +269,7 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
@@ -293,12 +293,12 @@ Box {
 (source_file
   (object
     name: (type_name
-      (ident))
+      name: (ident))
     content: (object_content
       (property
         name: (ident)
         value: (object_value
           (object
             name: (type_name
-              (ident))
+              name: (ident))
             content: (object_content)))))))
