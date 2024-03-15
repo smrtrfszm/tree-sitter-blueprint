@@ -1,0 +1,69 @@
+=======
+Numbers
+=======
+
+Box {
+  a: .5;
+  b: 0.0;
+  c: 1_000_000;
+  d: 0x30;
+  e: 0x2_32;
+  f: ._4_;
+  g: 0x_2_9_;
+  h: 0_._0_;
+  i: 1_;
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number))))
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number))))
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number))))
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number))))
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number))))
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number))))
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number))))
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number))))
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (number)))))))
+

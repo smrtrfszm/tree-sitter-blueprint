@@ -18,7 +18,25 @@ module.exports = grammar({
 
     ident: _ => /[A-Za-z_][A-Za-z0-9_-]*/,
 
-    number: _ => /[0-9](x[0-9a-fA-f]+|\.?[0-9_]*)/,
+    number: _ => {
+      const decimal_digits = /[0-9_]+/
+      const leading_decimal_digit = /[0-9]/
+
+      const decimal_literal = choice(
+        seq(
+          leading_decimal_digit,
+          optional(decimal_digits),
+          ".",
+          decimal_digits,
+        ),
+        seq(".", decimal_digits),
+        seq(leading_decimal_digit, optional(decimal_digits)),
+      )
+
+      const hex_literal = /0x[a-fA-F0-9_]+/
+
+      return token(choice(decimal_literal, hex_literal))
+    },
 
     // TODO: escape new line
     quoted: _ => choice(
