@@ -376,6 +376,57 @@
     }
   },
   {
+    "type": "ext_scale_mark",
+    "named": true,
+    "fields": {
+      "position": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "string_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ext_scale_marks",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "ext_scale_mark",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "ext_size_group_widgets",
     "named": true,
     "fields": {
@@ -730,6 +781,10 @@
         },
         {
           "type": "ext_list_item_factory",
+          "named": true
+        },
+        {
+          "type": "ext_scale_marks",
           "named": true
         },
         {
@@ -1200,6 +1255,14 @@
   },
   {
     "type": "layout",
+    "named": false
+  },
+  {
+    "type": "mark",
+    "named": false
+  },
+  {
+    "type": "marks",
     "named": false
   },
   {

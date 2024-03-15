@@ -260,6 +260,38 @@ ListView {
                           (ident))
                         content: (object_content)))))))))))))
 
+===========
+Scale Marks
+===========
+
+Scale {
+  marks [
+    mark (-1, bottom),
+    mark (0, top, _('Hello, world!')),
+    mark (2),
+  ]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      (ident))
+    content: (object_content
+      (ext_scale_marks
+        (ext_scale_mark
+          value: (number)
+          position: (ident))
+        (ext_scale_mark
+          value: (number)
+          position: (ident)
+          (string_value
+            (translated
+              (quoted))))
+        (ext_scale_mark
+          value: (number))))))
+
 =================
 SizeGroup widgets
 =================

@@ -274,6 +274,7 @@ module.exports = grammar({
       $.ext_file_filter_suffixes,
       $.ext_layout,
       $.ext_list_item_factory,
+      $.ext_scale_marks,
       $.ext_size_group_widgets,
       $.ext_string_list_strings,
       $.ext_styles,
@@ -380,6 +381,29 @@ module.exports = grammar({
       'template',
       field('name', $.type_name),
       field('content', $.object_content),
+    ),
+
+    ext_scale_marks: $ => seq(
+      'marks',
+      '[',
+      delimited($.ext_scale_mark, ','),
+      ']',
+    ),
+
+    ext_scale_mark: $ => seq(
+      'mark',
+      '(',
+      optional(choice('-', '+')),
+      field('value', $.number),
+      optional(seq(
+        ',',
+        field('position', $.ident),
+        optional(seq(
+          ',',
+          $.string_value,
+        ))
+      )),
+      ')',
     ),
 
     ext_size_group_widgets: $ => seq(
