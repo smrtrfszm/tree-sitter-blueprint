@@ -209,11 +209,11 @@ module.exports = grammar({
       'menu',
       optional(field('id', $.ident)),
       '{',
-      repeat($.menu_child),
+      repeat($._menu_child),
       '}',
     ),
 
-    menu_child: $ => choice(
+    _menu_child: $ => choice(
         $.menu_section,
         $.menu_submenu,
         $.menu_item_shorthand,
@@ -224,7 +224,7 @@ module.exports = grammar({
       'section',
       optional(field('id', $.ident)),
       '{',
-      repeat(choice($.menu_child, $.menu_attribute)),
+      repeat(choice($._menu_child, $.menu_attribute)),
       '}',
     ),
 
@@ -232,27 +232,32 @@ module.exports = grammar({
       'submenu',
       optional(field('id', $.ident)),
       '{',
-      repeat(choice($.menu_child, $.menu_attribute)),
+      repeat(choice($._menu_child, $.menu_attribute)),
       '}',
     ),
 
-    menu_item: $ => seq('item', '{', $.menu_attribute, '}'),
+    menu_item: $ => seq('item', '{', repeat($.menu_attribute), '}'),
 
-    menu_attribute: $ => seq(field('name', $.ident), ':', $.string_value, ';'),
+    menu_attribute: $ => seq(
+      field('name', $.ident),
+      ':',
+      field('value', $.string_value),
+      ';'
+    ),
 
     string_value: $ => choice($.translated, $._quoted_literal),
 
     menu_item_shorthand: $ => seq(
       'item',
       '(',
-      $.string_value,
+      field('label', $.string_value),
       optional(seq(
         ',',
         optional(seq(
-          $.string_value,
+          field('action', $.string_value),
           optional(seq(
             ',',
-            optional($.string_value),
+            optional(field('icon', $.string_value)),
           )),
         )),
       )),

@@ -535,47 +535,6 @@
       "required": false,
       "types": [
         {
-          "type": "menu_child",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "menu_attribute",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "string_value",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "menu_child",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
           "type": "menu_item",
           "named": true
         },
@@ -595,12 +554,38 @@
     }
   },
   {
+    "type": "menu_attribute",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_value",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "menu_item",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
         {
           "type": "menu_attribute",
@@ -612,16 +597,37 @@
   {
     "type": "menu_item_shorthand",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "string_value",
-          "named": true
-        }
-      ]
+    "fields": {
+      "action": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string_value",
+            "named": true
+          }
+        ]
+      },
+      "icon": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string_value",
+            "named": true
+          }
+        ]
+      },
+      "label": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_value",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -648,7 +654,19 @@
           "named": true
         },
         {
-          "type": "menu_child",
+          "type": "menu_item",
+          "named": true
+        },
+        {
+          "type": "menu_item_shorthand",
+          "named": true
+        },
+        {
+          "type": "menu_section",
+          "named": true
+        },
+        {
+          "type": "menu_submenu",
           "named": true
         }
       ]
@@ -678,7 +696,19 @@
           "named": true
         },
         {
-          "type": "menu_child",
+          "type": "menu_item",
+          "named": true
+        },
+        {
+          "type": "menu_item_shorthand",
+          "named": true
+        },
+        {
+          "type": "menu_section",
+          "named": true
+        },
+        {
+          "type": "menu_submenu",
           "named": true
         }
       ]

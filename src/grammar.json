@@ -1047,7 +1047,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "menu_child"
+            "name": "_menu_child"
           }
         },
         {
@@ -1056,7 +1056,7 @@
         }
       ]
     },
-    "menu_child": {
+    "_menu_child": {
       "type": "CHOICE",
       "members": [
         {
@@ -1111,7 +1111,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "menu_child"
+                "name": "_menu_child"
               },
               {
                 "type": "SYMBOL",
@@ -1160,7 +1160,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "menu_child"
+                "name": "_menu_child"
               },
               {
                 "type": "SYMBOL",
@@ -1187,8 +1187,11 @@
           "value": "{"
         },
         {
-          "type": "SYMBOL",
-          "name": "menu_attribute"
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "menu_attribute"
+          }
         },
         {
           "type": "STRING",
@@ -1212,8 +1215,12 @@
           "value": ":"
         },
         {
-          "type": "SYMBOL",
-          "name": "string_value"
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string_value"
+          }
         },
         {
           "type": "STRING",
@@ -1246,8 +1253,12 @@
           "value": "("
         },
         {
-          "type": "SYMBOL",
-          "name": "string_value"
+          "type": "FIELD",
+          "name": "label",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string_value"
+          }
         },
         {
           "type": "CHOICE",
@@ -1266,8 +1277,12 @@
                       "type": "SEQ",
                       "members": [
                         {
-                          "type": "SYMBOL",
-                          "name": "string_value"
+                          "type": "FIELD",
+                          "name": "action",
+                          "content": {
+                            "type": "SYMBOL",
+                            "name": "string_value"
+                          }
                         },
                         {
                           "type": "CHOICE",
@@ -1283,8 +1298,12 @@
                                   "type": "CHOICE",
                                   "members": [
                                     {
-                                      "type": "SYMBOL",
-                                      "name": "string_value"
+                                      "type": "FIELD",
+                                      "name": "icon",
+                                      "content": {
+                                        "type": "SYMBOL",
+                                        "name": "string_value"
+                                      }
                                     },
                                     {
                                       "type": "BLANK"

@@ -1,8 +1,6 @@
 =====
-Basic
+Empty
 =====
-
-using Gtk 4.0;
 
 menu my_menu {
 }
@@ -10,8 +8,262 @@ menu my_menu {
 ---
 
 (source_file
-  (using
-		namespace: (ident)
-		version: (number))
 	(menu
 		id: (ident)))
+
+====
+Item
+====
+
+menu id {
+  item {
+    a: "test";
+  }
+}
+
+---
+
+(source_file
+  (menu
+    id: (ident)
+    (menu_item
+      (menu_attribute
+        name: (ident)
+        value: (string_value
+          (quoted))))))
+
+===============
+Item Shorthands
+===============
+
+menu id {
+  item ("label")
+  item ("label", "action")
+  item ("label", "action", "icon")
+}
+
+---
+
+(source_file
+  (menu
+    id: (ident)
+    (menu_item_shorthand
+      label: (string_value
+        (quoted)))
+    (menu_item_shorthand
+      label: (string_value
+        (quoted))
+      action: (string_value
+        (quoted)))
+    (menu_item_shorthand
+      label: (string_value
+        (quoted))
+      action: (string_value
+        (quoted))
+      icon: (string_value
+        (quoted)))))
+
+=======
+Section
+=======
+
+menu id {
+  section {
+    label: "label";
+
+    item {
+      a: "test";
+    }
+
+    item {
+      a: "test";
+    }
+  }
+}
+
+---
+
+(source_file
+  (menu
+    id: (ident)
+    (menu_section
+      (menu_attribute
+        name: (ident)
+        value: (string_value
+          (quoted)))
+      (menu_item
+        (menu_attribute
+          name: (ident)
+          value: (string_value
+            (quoted))))
+      (menu_item
+        (menu_attribute
+          name: (ident)
+          value: (string_value
+            (quoted)))))))
+
+=======
+Submenu
+=======
+
+menu id {
+  submenu {
+    label: "label";
+
+    item {
+      a: "test";
+    }
+
+    item {
+      a: "test";
+    }
+  }
+}
+
+---
+
+(source_file
+  (menu
+    id: (ident)
+    (menu_submenu
+      (menu_attribute
+        name: (ident)
+        value: (string_value
+          (quoted)))
+      (menu_item
+        (menu_attribute
+          name: (ident)
+          value: (string_value
+            (quoted))))
+      (menu_item
+        (menu_attribute
+          name: (ident)
+          value: (string_value
+            (quoted)))))))
+
+=======
+Complex
+=======
+
+menu id {
+  submenu {
+    label: "submenu 1";
+
+    section {
+      item {
+        label: "item 1";
+        action: "app.test1";
+        icon: "test-symbolic";
+      }
+
+      item {
+        label: "item 2";
+        action: "app.test1";
+      }
+
+      item ("item 3")
+    }
+
+    section {
+      label: "section 2";
+
+      item ("item 4", "app.test2", "test-symbolic")
+
+      item {
+        label: "item 5";
+      }
+    }
+
+    item {
+      label: "item 6";
+    }
+  }
+
+  submenu {
+    item ("item 7", "app.test3")
+  }
+
+  item ("item 8", "app.test4", "test-symbolic")
+
+  item {
+    label: "item 9";
+  }
+}
+
+---
+
+(source_file
+  (menu
+    id: (ident)
+    (menu_submenu
+      (menu_attribute
+        name: (ident)
+        value: (string_value
+          (quoted)))
+      (menu_section
+        (menu_item
+          (menu_attribute
+            name: (ident)
+            value: (string_value
+              (quoted)))
+          (menu_attribute
+            name: (ident)
+            value: (string_value
+              (quoted)))
+          (menu_attribute
+            name: (ident)
+            value: (string_value
+              (quoted))))
+        (menu_item
+          (menu_attribute
+            name: (ident)
+            value: (string_value
+              (quoted)))
+          (menu_attribute
+            name: (ident)
+            value: (string_value
+              (quoted))))
+        (menu_item_shorthand
+          label: (string_value
+            (quoted))))
+      (menu_section
+        (menu_attribute
+          name: (ident)
+          value: (string_value
+            (quoted)))
+        (menu_item_shorthand
+          label: (string_value
+            (quoted))
+          action: (string_value
+            (quoted))
+          icon: (string_value
+            (quoted)))
+        (menu_item
+          (menu_attribute
+            name: (ident)
+            value: (string_value
+              (quoted)))))
+      (menu_item
+        (menu_attribute
+          name: (ident)
+          value: (string_value
+            (quoted)))))
+    (menu_submenu
+      (menu_item_shorthand
+        label: (string_value
+          (quoted))
+        action: (string_value
+          (quoted))))
+    (menu_item_shorthand
+      label: (string_value
+        (quoted))
+      action: (string_value
+        (quoted))
+      icon: (string_value
+        (quoted)))
+    (menu_item
+      (menu_attribute
+        name: (ident)
+        value: (string_value
+          (quoted))))))
+
