@@ -1272,6 +1272,10 @@
     "named": false
   },
   {
+    "type": "bind-property",
+    "named": false
+  },
+  {
     "type": "comment",
     "named": true
   },

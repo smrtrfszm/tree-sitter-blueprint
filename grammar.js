@@ -161,7 +161,7 @@ module.exports = grammar({
     ),
 
     binding: $ => seq(
-      'bind',
+      choice('bind', 'bind-property'),
       $._expression,
       repeat(choice('inverted', 'bidirectional', 'no-sync-create', 'sync-create')),
     ),
