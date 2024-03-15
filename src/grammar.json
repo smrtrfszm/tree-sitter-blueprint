@@ -771,6 +771,10 @@
               },
               {
                 "type": "STRING",
+                "value": "no-sync-create"
+              },
+              {
+                "type": "STRING",
                 "value": "sync-create"
               }
             ]

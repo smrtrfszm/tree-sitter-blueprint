@@ -195,7 +195,7 @@ Binding with multiple flags
 ===========================
 
 Box {
-  spacing: bind 12 inverted bidirectional sync-create;
+  spacing: bind 12 inverted bidirectional sync-create no-sync-create;
 }
 
 ---

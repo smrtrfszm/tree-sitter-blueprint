@@ -1211,6 +1211,10 @@
     "named": false
   },
   {
+    "type": "no-sync-create",
+    "named": false
+  },
+  {
     "type": "number",
     "named": true
   },
