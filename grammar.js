@@ -115,11 +115,7 @@ module.exports = grammar({
       '$',
       field('name', $.ident),
       '(',
-      optional(seq(
-        $._expression,
-        repeat(seq(',', $._expression)),
-        optional(','),
-      )),
+      delimited($._expression, ','),
       ')',
     ),
 
@@ -298,14 +294,7 @@ module.exports = grammar({
     ext_adw_dialog: $ => seq(
       'responses',
       '[',
-      optional(seq(
-        $.ext_adw_dialog_response,
-        repeat(seq(
-          ',',
-          $.ext_adw_dialog_response,
-        )),
-        optional(','),
-      )),
+      delimited($.ext_adw_dialog_response, ','),
       ']',
     ),
 
@@ -340,14 +329,7 @@ module.exports = grammar({
     ext_combo_box_items: $ => seq(
       'items',
       '[',
-      optional(seq(
-        $._ext_combo_box_item,
-        repeat(seq(
-          ',',
-          $._ext_combo_box_item,
-        )),
-        optional(','),
-      )),
+      delimited($._ext_combo_box_item, ','),
       ']',
     ),
 
@@ -362,42 +344,21 @@ module.exports = grammar({
     ext_file_filter_mime_types: $ => seq(
       'mime-types',
       '[',
-      optional(seq(
-        $._ext_file_filter_item,
-        repeat(seq(
-          ',',
-          $._ext_file_filter_item,
-        )),
-        optional(','),
-      )),
+      delimited($._ext_file_filter_item, ','),
       ']',
     ),
 
     ext_file_filter_patterns: $ => seq(
       'patterns',
       '[',
-      optional(seq(
-        $._ext_file_filter_item,
-        repeat(seq(
-          ',',
-          $._ext_file_filter_item,
-        )),
-        optional(','),
-      )),
+      delimited($._ext_file_filter_item, ','),
       ']',
     ),
 
     ext_file_filter_suffixes: $ => seq(
       'suffixes',
       '[',
-      optional(seq(
-        $._ext_file_filter_item,
-        repeat(seq(
-          ',',
-          $._ext_file_filter_item,
-        )),
-        optional(','),
-      )),
+      delimited($._ext_file_filter_item, ','),
       ']',
     ),
 
@@ -424,14 +385,7 @@ module.exports = grammar({
     ext_size_group_widgets: $ => seq(
       'widgets',
       '[',
-      optional(seq(
-        $._ext_size_group_widget,
-        repeat(seq(
-          ',',
-          $._ext_size_group_widget,
-        )),
-        optional(','),
-      )),
+      delimited($._ext_size_group_widget, ','),
       ']',
     ),
 
@@ -440,14 +394,7 @@ module.exports = grammar({
     ext_string_list_strings: $ => seq(
       'strings',
       '[',
-      optional(seq(
-        $._ext_strings_list_item,
-        repeat(seq(
-          ',',
-          $._ext_strings_list_item,
-        )),
-        optional(','),
-      )),
+      delimited($._ext_strings_list_item, ','),
       ']',
     ),
     
