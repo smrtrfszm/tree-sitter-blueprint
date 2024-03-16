@@ -2,12 +2,12 @@
 (block_comment) @comment
 
 (using
-  namespace: (ident) @type)
+  namespace: (ident) @module)
 
 (type_name
   name: (ident) @type)
 (type_name
-  namespace: (ident) @type)
+  namespace: (ident) @module)
 
 (object
   id: (ident) @variable)
