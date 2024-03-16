@@ -44,6 +44,14 @@
 ((literal (ident) @constant.builtin)
   (#any-of? @constant.builtin "true" "false" "null"))
 
+"=" @operator
+
+[
+  "action"
+  "response"
+  "default"
+] @attribute
+
 [
   "("
   ")"
