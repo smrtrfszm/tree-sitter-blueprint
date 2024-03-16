@@ -81,8 +81,9 @@
   "C_" 
 ] @punctuation.special
 
+"using" @keyword.import
+
 [
-  "using"
   "template"
   "menu"
   "submenu"
