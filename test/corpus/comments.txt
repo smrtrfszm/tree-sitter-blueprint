@@ -7,7 +7,7 @@ Line comment
 ---
 
 (source_file
-  (comment))
+  (line_comment))
 
 =============
 Block comment
@@ -18,7 +18,7 @@ Block comment
 ---
 
 (source_file
-  (comment))
+  (block_comment))
 
 ======================
 Line comment in object
@@ -35,7 +35,7 @@ Box {
     name: (type_name
       name: (ident))
     content: (object_content
-      (comment))))
+      (line_comment))))
 
 =======================
 Block comment in object
@@ -52,7 +52,7 @@ Box {
     name: (type_name
       name: (ident))
     content: (object_content
-      (comment))))
+      (block_comment))))
 
 ===========================
 Line comment after property
@@ -74,7 +74,7 @@ Box {
 	value: (value
 	  (literal
 	    (quoted))))
-      (comment))))
+      (line_comment))))
 
 ============================
 Block comment after property
@@ -96,7 +96,7 @@ Box {
 	value: (value
 	  (literal
 	    (quoted))))
-      (comment))))
+      (block_comment))))
 
 =============================
 Block comment before property
@@ -113,7 +113,7 @@ Box {
     name: (type_name
       name: (ident))
     content: (object_content
-      (comment)
+      (block_comment)
       (property
         name: (ident)
 	value: (value
@@ -135,7 +135,7 @@ Box {
     name: (type_name
       name: (ident))
     content: (object_content
-      (comment))))
+      (line_comment))))
 
 =========================
 Asterisk in block comment
@@ -146,7 +146,7 @@ Asterisk in block comment
 ---
 
 (source_file
-  (comment))
+  (block_comment))
 
 ===============================
 Slash asterisk in block comment
@@ -157,4 +157,4 @@ Slash asterisk in block comment
 ---
 
 (source_file
-  (comment))
+  (block_comment))

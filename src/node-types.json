@@ -1284,7 +1284,7 @@
     "named": false
   },
   {
-    "type": "comment",
+    "type": "block_comment",
     "named": true
   },
   {
@@ -1322,6 +1322,10 @@
   {
     "type": "layout",
     "named": false
+  },
+  {
+    "type": "line_comment",
+    "named": true
   },
   {
     "type": "mark",

@@ -2,8 +2,9 @@ module.exports = grammar({
   name: 'blueprint',
 
   extras: $ => [
-    /\s|\\\r?\n/,
-    $.comment,
+    $.line_comment,
+    $.block_comment,
+    /[ \t\f\r\n]/,
   ],
 
   rules: {
@@ -272,13 +273,12 @@ module.exports = grammar({
       ')',
     ),
 
-    comment: _ => token(choice(
-      seq('//', /(\\+(.|\r?\n)|[^\\\n])*/),
-      seq(
-        '/*',
-        /[^*]*\*+([^/*][^*]*\*+)*/,
-        '/',
-      ),
+    line_comment: _ => token(seq('//', /.*/)),
+
+    block_comment: _ => token(seq(
+      '/*',
+      /[^*]*\*+([^/*][^*]*\*+)*/,
+      '/'
     )),
 
     _extension: $ => choice(
