@@ -44,7 +44,9 @@
 (quoted) @string
 
 ((literal (ident) @constant.builtin)
-  (#any-of? @constant.builtin "true" "false" "null"))
+  (#eq? @constant.builtin "null"))
+((literal (ident) @boolean)
+  (#any-of? @boolean "true" "false"))
 
 "=" @operator
 
