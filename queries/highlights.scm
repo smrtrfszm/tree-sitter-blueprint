@@ -65,7 +65,11 @@
   "=>"
 ] @punctuation.delimiter
 
-"$" @punctuation.special
+[
+  "$" 
+  "_" 
+  "C_" 
+] @punctuation.special
 
 [
   "using"
