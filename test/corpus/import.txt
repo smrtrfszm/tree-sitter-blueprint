@@ -9,7 +9,7 @@ using Gtk 4.0;
 (source_file
   (using
     namespace: (ident)
-    version: (number)))
+    version: (float_literal)))
 
 ================
 Multiple import
@@ -23,7 +23,7 @@ using Adw 1;
 (source_file
   (using
     namespace: (ident)
-    version: (number))
+    version: (float_literal))
   (using
     namespace: (ident)
-    version: (number)))
+    version: (integer_literal)))

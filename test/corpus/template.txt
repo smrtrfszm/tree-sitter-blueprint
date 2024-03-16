@@ -2,17 +2,12 @@
 With short name
 ===============
 
-using Gtk 4.0;
-
 template Name {
 }
 
 ---
 
 (source_file
-  (using
-    namespace: (ident)
-    version: (number))
   (template
     name: (type_name
       name: (ident))
@@ -22,17 +17,12 @@ template Name {
 With external name
 ==================
 
-using Gtk 4.0;
-
 template $Name {
 }
 
 ---
 
 (source_file
-  (using
-    namespace: (ident)
-    version: (number))
   (template
     name: (type_name
       name: (ident))
@@ -42,17 +32,12 @@ template $Name {
 Subclass with short name
 ========================
 
-using Gtk 4.0;
-
 template Name : Subclass {
 }
 
 ---
 
 (source_file
-  (using
-    namespace: (ident)
-    version: (number))
   (template
     name: (type_name
       name: (ident))
@@ -64,17 +49,12 @@ template Name : Subclass {
 Subclass with full name
 ======================
 
-using Gtk 4.0;
-
 template Name : Namespace.Name {
 }
 
 ---
 
 (source_file
-  (using
-    namespace: (ident)
-    version: (number))
   (template
     name: (type_name
       name: (ident))

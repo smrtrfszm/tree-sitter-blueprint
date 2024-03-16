@@ -103,7 +103,7 @@ Dialog {
         content: (object_content))
       (child_extension
         (ext_response
-          id: (number)))
+          id: (integer_literal)))
       (object
         name: (type_name
           name: (ident))

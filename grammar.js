@@ -20,25 +20,31 @@ module.exports = grammar({
 
     ident: _ => /[A-Za-z_][A-Za-z0-9_-]*/,
 
-    number: _ => {
+    integer_literal: _ => /[0-9][0-9_]*/,
+
+    hex_literal: _ => /0x[a-fA-F0-9_]+/,
+
+    float_literal: _ => {
       const decimal_digits = /[0-9_]+/
       const leading_decimal_digit = /[0-9]/
 
-      const decimal_literal = choice(
+      const end = seq(".", decimal_digits)
+
+      return token(choice(
         seq(
           leading_decimal_digit,
           optional(decimal_digits),
-          ".",
-          decimal_digits,
+          end,
         ),
-        seq(".", decimal_digits),
-        seq(leading_decimal_digit, optional(decimal_digits)),
-      )
-
-      const hex_literal = /0x[a-fA-F0-9_]+/
-
-      return token(choice(decimal_literal, hex_literal))
+        end,
+      ))
     },
+
+    _number: $ => choice(
+      $.integer_literal,
+      $.hex_literal,
+      $.float_literal,
+    ),
 
     escape_sequence: _ => /\\(\r\n|\r|\n|.)/,
 
@@ -67,7 +73,7 @@ module.exports = grammar({
     using: $ => seq(
       'using',
       field('namespace', $.ident),
-      field('version', $.number),
+      field('version', $._number),
       ';'
     ),
 
@@ -152,7 +158,7 @@ module.exports = grammar({
 
     _number_literal: $ => seq(
       optional(choice('-', '+')),
-      $.number,
+      $._number,
     ),
 
     _ident_literal: $ => $.ident,
@@ -414,7 +420,7 @@ module.exports = grammar({
       'mark',
       '(',
       optional(choice('-', '+')),
-      field('value', $.number),
+      field('value', $._number),
       optional(seq(
         ',',
         field('position', $.ident),
@@ -461,7 +467,7 @@ module.exports = grammar({
       '=',
       choice(
         field('name', $.ident),
-        field('id', $.number),
+        field('id', $._number),
       ),
       optional('default'),
     ),

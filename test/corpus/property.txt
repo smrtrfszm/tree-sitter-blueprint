@@ -102,7 +102,7 @@ Box {
         name: (ident)
         value: (value
           (literal
-            (number)))))))
+            (integer_literal)))))))
 
 ==============
 Typeof literal
@@ -167,7 +167,7 @@ Box {
         name: (ident)
         value: (binding
           (literal
-            (number)))))))
+            (integer_literal)))))))
 
 ==================
 Binding with flags
@@ -188,7 +188,7 @@ Box {
         name: (ident)
         value: (binding
           (literal
-            (number)))))))
+            (integer_literal)))))))
 
 ===========================
 Binding with multiple flags
@@ -209,7 +209,7 @@ Box {
         name: (ident)
         value: (binding
           (literal
-            (number)))))))
+            (integer_literal)))))))
 
 ===============================
 Binding with closure expression

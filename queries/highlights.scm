@@ -38,7 +38,9 @@
 
 (escape_sequence) @string.escape
 
-(number) @number
+(integer_literal) @number
+(hex_literal) @number
+(float_literal) @number.float
 (quoted) @string
 
 ((literal (ident) @constant.builtin)

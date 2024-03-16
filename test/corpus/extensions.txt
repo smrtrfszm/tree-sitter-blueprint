@@ -215,11 +215,11 @@ Button {
         name: (ident)
         value: (value
           (literal
-            (number)))
+            (integer_literal)))
         name: (ident)
         value: (value
           (literal
-            (number)))))))
+            (integer_literal)))))))
 
 ================================
 BuilderListItemFactory templates
@@ -281,16 +281,16 @@ Scale {
     content: (object_content
       (ext_scale_marks
         (ext_scale_mark
-          value: (number)
+          value: (integer_literal)
           position: (ident))
         (ext_scale_mark
-          value: (number)
+          value: (integer_literal)
           position: (ident)
           (string_value
             (translated
               (quoted))))
         (ext_scale_mark
-          value: (number))))))
+          value: (integer_literal))))))
 
 =================
 SizeGroup widgets

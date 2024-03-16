@@ -11,7 +11,7 @@ translation-domain "test";
 (source_file
   (using
     namespace: (ident)
-    version: (number))
+    version: (float_literal))
   (translation_domain
     domain: (quoted)))
 

@@ -25,45 +25,45 @@ Box {
         name: (ident)
         value: (value
           (literal
-            (number))))
+            (float_literal))))
       (property
         name: (ident)
         value: (value
           (literal
-            (number))))
+            (float_literal))))
       (property
         name: (ident)
         value: (value
           (literal
-            (number))))
+            (integer_literal))))
       (property
         name: (ident)
         value: (value
           (literal
-            (number))))
+            (hex_literal))))
       (property
         name: (ident)
         value: (value
           (literal
-            (number))))
+            (hex_literal))))
       (property
         name: (ident)
         value: (value
           (literal
-            (number))))
+            (float_literal))))
       (property
         name: (ident)
         value: (value
           (literal
-            (number))))
+            (hex_literal))))
       (property
         name: (ident)
         value: (value
           (literal
-            (number))))
+            (float_literal))))
       (property
         name: (ident)
         value: (value
           (literal
-            (number)))))))
+            (integer_literal)))))))
 
