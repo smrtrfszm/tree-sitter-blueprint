@@ -39,11 +39,19 @@ module.exports = grammar({
       return token(choice(decimal_literal, hex_literal))
     },
 
-    // TODO: escape new line
-    quoted: _ => choice(
-      /'([^']|\\['"nt])*'/,
-      /"([^"]|\\['"nt])*"/,
-    ),
+    escape_sequence: _ => /\\(\r\n|\r|\n|.)/,
+
+    quoted: $ => {
+      const body = (body) => repeat(choice(
+        $.escape_sequence,
+        body,
+      ))
+
+      return choice(
+        seq('"', body(/[^'\\\n]/), token.immediate('"')),
+        seq('\'', body(/[^"\\\n]/), token.immediate('\'')),
+      )
+    },
 
     type_name: $ => choice(
       seq(

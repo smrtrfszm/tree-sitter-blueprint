@@ -15,9 +15,9 @@ Box {
     content: (object_content
       (property
         name: (ident)
-	value: (value
-	  (literal
-	    (quoted)))))))
+        value: (value
+          (literal
+            (quoted)))))))
 
 =========================
 String with double quotes
@@ -36,9 +36,9 @@ Box {
     content: (object_content
       (property
         name: (ident)
-	value: (value
-	  (literal
-	    (quoted)))))))
+        value: (value
+          (literal
+            (quoted)))))))
 
 =================================
 String with escaped single quotes
@@ -57,9 +57,10 @@ Box {
     content: (object_content
       (property
         name: (ident)
-	value: (value
-	  (literal
-	    (quoted)))))))
+        value: (value
+          (literal
+            (quoted
+              (escape_sequence))))))))
 
 =================================
 String with escaped double quotes
@@ -78,6 +79,30 @@ Box {
     content: (object_content
       (property
         name: (ident)
-	value: (value
-	  (literal
-	    (quoted)))))))
+        value: (value
+          (literal
+            (quoted
+              (escape_sequence))))))))
+
+================
+Multiline string
+================
+
+Box {
+  a: "line 1\
+line 2";
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      name: (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (value
+          (literal
+            (quoted
+              (escape_sequence))))))))
