@@ -1033,6 +1033,57 @@
         }
       ]
     },
+    "child_internal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "internal-child"
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "ident"
+          }
+        }
+      ]
+    },
+    "child_annotation": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "child_internal"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_child_extension"
+            },
+            {
+              "type": "FIELD",
+              "name": "child_type",
+              "content": {
+                "type": "SYMBOL",
+                "name": "ident"
+              }
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "]"
+        }
+      ]
+    },
     "_child": {
       "type": "SEQ",
       "members": [
@@ -1040,47 +1091,8 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "["
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SEQ",
-                      "members": [
-                        {
-                          "type": "STRING",
-                          "value": "internal-child"
-                        },
-                        {
-                          "type": "SYMBOL",
-                          "name": "ident"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "SYMBOL",
-                      "name": "child_extension"
-                    },
-                    {
-                      "type": "FIELD",
-                      "name": "child_type",
-                      "content": {
-                        "type": "SYMBOL",
-                        "name": "ident"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": "]"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "child_annotation"
             },
             {
               "type": "BLANK"
@@ -2472,7 +2484,7 @@
         }
       ]
     },
-    "child_extension": {
+    "_child_extension": {
       "type": "CHOICE",
       "members": [
         {

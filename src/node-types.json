@@ -42,18 +42,49 @@
     }
   },
   {
-    "type": "child_extension",
+    "type": "child_annotation",
     "named": true,
-    "fields": {},
+    "fields": {
+      "child_type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
+        {
+          "type": "child_internal",
+          "named": true
+        },
         {
           "type": "ext_response",
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "child_internal",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -777,24 +808,13 @@
   {
     "type": "object_content",
     "named": true,
-    "fields": {
-      "child_type": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "child_extension",
+          "type": "child_annotation",
           "named": true
         },
         {
@@ -851,10 +871,6 @@
         },
         {
           "type": "ext_styles",
-          "named": true
-        },
-        {
-          "type": "ident",
           "named": true
         },
         {

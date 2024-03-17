@@ -36,7 +36,8 @@ HeaderBar {
     name: (type_name
       name: (ident))
     content: (object_content
-      child_type: (ident)
+      (child_annotation
+        child_type: (ident))
       (object
         name: (type_name
           name: (ident))
@@ -59,7 +60,9 @@ Dialog {
     name: (type_name
       name: (ident))
     content: (object_content
-      (ident)
+      (child_annotation
+        (child_internal
+	  name: (ident)))
       (object
         name: (type_name
           name: (ident))
@@ -87,21 +90,21 @@ Dialog {
     name: (type_name
       name: (ident))
     content: (object_content
-      (child_extension
+      (child_annotation
         (ext_response
           name: (ident)))
       (object
         name: (type_name
           name: (ident))
         content: (object_content))
-      (child_extension
+      (child_annotation
         (ext_response
           name: (ident)))
       (object
         name: (type_name
           name: (ident))
         content: (object_content))
-      (child_extension
+      (child_annotation
         (ext_response
           id: (integer_literal)))
       (object

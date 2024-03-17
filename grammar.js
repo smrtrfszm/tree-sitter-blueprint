@@ -207,16 +207,23 @@ module.exports = grammar({
       optional('|'),
     ),
 
+    child_internal: $ => seq(
+      'internal-child',
+      field('name', $.ident)
+    ),
+
+    child_annotation: $ => seq(
+      '[',
+      choice(
+        $.child_internal,
+        $._child_extension,
+        field('child_type', $.ident),
+      ),
+      ']',
+    ),
+
     _child: $ => seq(
-      optional(seq(
-        '[',
-        choice(
-          seq('internal-child', $.ident),
-          $.child_extension,
-          field('child_type', $.ident),
-        ),
-        ']',
-      )),
+      optional($.child_annotation),
       $.object,
     ),
 
@@ -457,7 +464,7 @@ module.exports = grammar({
       ']',
     ),
 
-    child_extension: $ => choice(
+    _child_extension: $ => choice(
       $.ext_response,
     ),
 
