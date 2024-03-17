@@ -899,7 +899,7 @@
           "value": 2,
           "content": {
             "type": "SYMBOL",
-            "name": "_flags"
+            "name": "flags"
           }
         },
         {
@@ -983,7 +983,7 @@
         }
       ]
     },
-    "_flags": {
+    "flags": {
       "type": "SEQ",
       "members": [
         {

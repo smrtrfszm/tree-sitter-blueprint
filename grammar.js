@@ -185,7 +185,7 @@ module.exports = grammar({
 
     value: $ => choice(
       prec(3, $.translated),
-      prec(2, $._flags),
+      prec(2, $.flags),
       prec(1, $.literal),
     ),
 
@@ -201,7 +201,7 @@ module.exports = grammar({
       )),
     ),
 
-    _flags: $ => seq(
+    flags: $ => seq(
       $.ident,
       repeat1(seq('|', $.ident)),
       optional('|'),

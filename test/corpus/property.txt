@@ -145,8 +145,9 @@ Box {
       (property
         name: (ident)
         value: (value
-          (ident)
-          (ident))))))
+          (flags
+            (ident)
+            (ident)))))))
 
 =============
 Basic binding

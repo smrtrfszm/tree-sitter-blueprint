@@ -46,6 +46,8 @@
 (float_literal) @number.float
 (quoted) @string
 
+(flags (ident) @constant)
+
 ((literal (ident) @constant.builtin)
   (#eq? @constant.builtin "null"))
 ((literal (ident) @boolean)
