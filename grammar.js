@@ -28,7 +28,7 @@ module.exports = grammar({
       const decimal_digits = /[0-9_]+/
       const leading_decimal_digit = /[0-9]/
 
-      const end = seq(".", decimal_digits)
+      const end = seq('.', decimal_digits)
 
       return token(choice(
         seq(
