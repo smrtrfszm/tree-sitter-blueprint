@@ -14,6 +14,9 @@
 (closure_expression
   name: (ident) @variable)
 (lookup_expression (ident) @property)
+(child_annotation
+  (child_internal
+    name: (ident) @variable))
 
 (property
   name: (ident) @property)
@@ -48,13 +51,16 @@
 ((literal (ident) @boolean)
   (#any-of? @boolean "true" "false"))
 
-"=" @operator
+(child_annotation
+  child_type: (ident) @attribute)
 
 [
   "action"
   "response"
   "default"
 ] @attribute
+
+"=" @operator
 
 [
   "("
