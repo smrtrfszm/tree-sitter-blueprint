@@ -178,7 +178,7 @@ module.exports = grammar({
     binding: $ => seq(
       choice('bind', 'bind-property'),
       $._expression,
-      repeat(choice('inverted', 'bidirectional', 'no-sync-create', 'sync-create')),
+      repeat(field('flags', $.ident)),
     ),
 
     object_value: $ => $.object,
@@ -336,7 +336,7 @@ module.exports = grammar({
       field('id', $.ident),
       ':',
       field('value', $.string_value),
-      field('flags', repeat($.ident)),
+      repeat(field('flags', $.ident)),
     ),
 
     ext_adw_breakpoint_condition: $ => seq(

@@ -2,7 +2,18 @@
   {
     "type": "binding",
     "named": true,
-    "fields": {},
+    "fields": {
+      "flags": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
@@ -1320,10 +1331,6 @@
     "named": false
   },
   {
-    "type": "bidirectional",
-    "named": false
-  },
-  {
     "type": "bind",
     "named": false
   },
@@ -1368,10 +1375,6 @@
     "named": false
   },
   {
-    "type": "inverted",
-    "named": false
-  },
-  {
     "type": "item",
     "named": false
   },
@@ -1401,10 +1404,6 @@
   },
   {
     "type": "mime-types",
-    "named": false
-  },
-  {
-    "type": "no-sync-create",
     "named": false
   },
   {
@@ -1445,10 +1444,6 @@
   },
   {
     "type": "swapped",
-    "named": false
-  },
-  {
-    "type": "sync-create",
     "named": false
   },
   {

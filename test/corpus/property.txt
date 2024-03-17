@@ -188,7 +188,8 @@ Box {
         name: (ident)
         value: (binding
           (literal
-            (integer_literal)))))))
+            (integer_literal))
+	  flags: (ident))))))
 
 ===========================
 Binding with multiple flags
@@ -209,7 +210,11 @@ Box {
         name: (ident)
         value: (binding
           (literal
-            (integer_literal)))))))
+            (integer_literal))
+	  flags: (ident)
+	  flags: (ident)
+	  flags: (ident)
+	  flags: (ident))))))
 
 ===============================
 Binding with closure expression

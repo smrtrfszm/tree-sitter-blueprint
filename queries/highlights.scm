@@ -91,6 +91,20 @@
 
 "using" @keyword.import
 
+; TODO: internal-child
+
+(binding
+  flags: (ident) @constant)
+(ext_adw_dialog_response
+  flags: (ident) @constant)
+
+(binding
+  flags: (ident) @constant.builtin
+  (#any-of? @constant.builtin "inverted" "bidirectional" "no-sync-create" "sync-create"))
+(ext_adw_dialog_response
+  flags: (ident) @constant.builtin
+  (#any-of? @constant.builtin "destructive" "suggested" "disabled"))
+
 [
   "template"
   "menu"

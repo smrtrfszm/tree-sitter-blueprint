@@ -869,25 +869,12 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "inverted"
-              },
-              {
-                "type": "STRING",
-                "value": "bidirectional"
-              },
-              {
-                "type": "STRING",
-                "value": "no-sync-create"
-              },
-              {
-                "type": "STRING",
-                "value": "sync-create"
-              }
-            ]
+            "type": "FIELD",
+            "name": "flags",
+            "content": {
+              "type": "SYMBOL",
+              "name": "ident"
+            }
           }
         }
       ]
@@ -1658,10 +1645,10 @@
           }
         },
         {
-          "type": "FIELD",
-          "name": "flags",
+          "type": "REPEAT",
           "content": {
-            "type": "REPEAT",
+            "type": "FIELD",
+            "name": "flags",
             "content": {
               "type": "SYMBOL",
               "name": "ident"
