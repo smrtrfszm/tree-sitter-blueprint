@@ -111,3 +111,33 @@ Dialog {
         name: (type_name
           name: (ident))
         content: (object_content)))))
+
+=================
+Action type child
+=================
+
+Adw.ExpanderRow {
+  [action]
+  Label {
+    label: "text";
+  }
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      namespace: (ident)
+      name: (ident))
+    content: (object_content
+      (child_annotation)
+      (object
+        name: (type_name
+          name: (ident))
+        content: (object_content
+          (property
+            name: (ident)
+            value: (value
+              (literal
+                (quoted)))))))))

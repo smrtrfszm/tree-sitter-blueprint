@@ -223,7 +223,8 @@ module.exports = grammar({
       choice(
         $.child_internal,
         $._child_extension,
-        field('child_type', $.ident),
+        // FIXME: shouldn't specify "action" explicitly
+        field('child_type', choice($.ident, 'action')),
       ),
       ']',
     ),

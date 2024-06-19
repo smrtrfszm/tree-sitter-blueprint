@@ -1084,8 +1084,17 @@
               "type": "FIELD",
               "name": "child_type",
               "content": {
-                "type": "SYMBOL",
-                "name": "ident"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "ident"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "action"
+                  }
+                ]
               }
             }
           ]

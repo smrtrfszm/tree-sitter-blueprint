@@ -61,6 +61,10 @@
         "required": false,
         "types": [
           {
+            "type": "action",
+            "named": false
+          },
+          {
             "type": "ident",
             "named": true
           }
