@@ -46,17 +46,17 @@ module.exports = grammar({
       $.float_literal,
     ),
 
-    escape_sequence: _ => /\\(\r\n|\r|\n|.)/,
+    escape_sequence: _ => /\\(\r\n|\r|\n|"|'|\\|t|n)/,
 
     quoted: $ => {
       const body = (body) => repeat(choice(
-        $.escape_sequence,
         body,
+        $.escape_sequence,
       ))
 
       return choice(
-        seq('"', body(/[^'\\\n]/), token.immediate('"')),
-        seq('\'', body(/[^"\\\n]/), token.immediate('\'')),
+        seq('"', body(/[^"\\\n]/), token.immediate('"')),
+        seq('\'', body(/[^'\\\n]/), token.immediate('\'')),
       )
     },
 

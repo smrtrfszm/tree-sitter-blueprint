@@ -143,7 +143,7 @@
     },
     "escape_sequence": {
       "type": "PATTERN",
-      "value": "\\\\(\\r\\n|\\r|\\n|.)"
+      "value": "\\\\(\\r\\n|\\r|\\n|\"|'|\\\\|t|n)"
     },
     "quoted": {
       "type": "CHOICE",
@@ -161,12 +161,12 @@
                 "type": "CHOICE",
                 "members": [
                   {
-                    "type": "SYMBOL",
-                    "name": "escape_sequence"
+                    "type": "PATTERN",
+                    "value": "[^\"\\\\\\n]"
                   },
                   {
-                    "type": "PATTERN",
-                    "value": "[^'\\\\\\n]"
+                    "type": "SYMBOL",
+                    "name": "escape_sequence"
                   }
                 ]
               }
@@ -193,12 +193,12 @@
                 "type": "CHOICE",
                 "members": [
                   {
-                    "type": "SYMBOL",
-                    "name": "escape_sequence"
+                    "type": "PATTERN",
+                    "value": "[^'\\\\\\n]"
                   },
                   {
-                    "type": "PATTERN",
-                    "value": "[^\"\\\\\\n]"
+                    "type": "SYMBOL",
+                    "name": "escape_sequence"
                   }
                 ]
               }
