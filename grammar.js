@@ -69,7 +69,10 @@ module.exports = grammar({
         '.',
         field('name', $.ident)
       ),
-      seq('$', field('name', $.ident)),
+      seq(
+        choice('$', '.'),
+        field('name', $.ident)
+      ),
       field('name', $.ident),
     ),
 

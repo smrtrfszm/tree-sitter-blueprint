@@ -62,3 +62,18 @@ template Name : Namespace.Name {
       namespace: (ident)
       name: (ident))
     content: (object_content)))
+
+====================
+Legacy external type
+====================
+
+template .Name {
+}
+
+---
+
+(source_file
+  (template
+    name: (type_name
+      name: (ident))
+    content: (object_content)))

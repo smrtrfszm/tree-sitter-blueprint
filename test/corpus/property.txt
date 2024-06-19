@@ -308,3 +308,27 @@ Box {
             name: (type_name
               name: (ident))
             content: (object_content)))))))
+
+======================
+Legacy external object
+======================
+
+Box {
+  child: .Type {
+  };
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      name: (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (object_value
+          (object
+            name: (type_name
+              name: (ident))
+            content: (object_content)))))))
