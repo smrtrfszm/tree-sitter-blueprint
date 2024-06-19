@@ -113,7 +113,7 @@ module.exports = grammar({
       field('name', $.ident),
       optional(seq('::', field('detail', $.ident))),
       '=>',
-      '$',
+      optional('$'), // this will be required at some point
       field('handler', $.ident),
       '(',
       optional(field('object', $.ident)),
@@ -454,7 +454,7 @@ module.exports = grammar({
       delimited($._ext_strings_list_item, ','),
       ']',
     ),
-    
+
     _ext_strings_list_item: $ => $.string_value,
 
     ext_styles: $ => seq(

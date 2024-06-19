@@ -75,3 +75,22 @@ T {
         name: (ident)
         detail: (ident)
 	handler: (ident)))))
+
+============================
+Legacy without extern syntax
+============================
+
+T {
+  clicked => on_button_clicked();
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      name: (ident))
+    content: (object_content
+      (signal
+        name: (ident)
+	handler: (ident)))))
