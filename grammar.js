@@ -54,9 +54,12 @@ module.exports = grammar({
         $.escape_sequence,
       ))
 
+      const double_body = body(token.immediate(prec(1, /[^"\\\n]/)))
+      const single_body = body(token.immediate(prec(1, /[^'\\\n]/)))
+
       return choice(
-        seq('"', body(/[^"\\\n]/), token.immediate('"')),
-        seq('\'', body(/[^'\\\n]/), token.immediate('\'')),
+        seq('"', double_body, '"'),
+        seq('\'', single_body, '\''),
       )
     },
 
@@ -286,7 +289,7 @@ module.exports = grammar({
       ')',
     ),
 
-    line_comment: _ => token(seq('//', /.*/)),
+    line_comment: _ => token(seq('//', /[^\r\n]*/)),
 
     block_comment: _ => token(seq(
       '/*',

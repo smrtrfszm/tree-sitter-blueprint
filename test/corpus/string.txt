@@ -193,3 +193,24 @@ Button {
           (literal
             (quoted
               (escape_sequence))))))))
+
+=======================
+Comment inside a string
+=======================
+
+Button {
+  label: "//a";
+}
+
+---
+
+(source_file
+  (object
+    (type_name
+      (ident))
+    (object_content
+      (property
+        (ident)
+        (value
+          (literal
+            (quoted)))))))
