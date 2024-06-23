@@ -1,0 +1,159 @@
+using Gtk 4.0;
+// <- keyword.import
+using Adw 1;
+// <- keyword.import
+using Gio 2.0;
+// <- keyword.import
+using GObject 2.0;
+// <- keyword.import
+
+translation-domain "blueprint-tests";
+// <- keyword
+
+template $MyTemplate : Box {
+  // <- keyword
+  prop1: bind template.prop2 as <$MyObject>.prop3;
+  //     ^ keyword
+  //                         ^ keyword
+  visible: bind-property box.visible inverted;
+  //       ^ keyword
+
+  accessibility {
+    // <- keyword
+    label: _("Hello, world!");
+    labelled-by: label;
+    checked: true;
+  }
+
+  styles [
+    // <- keyword
+    "class-1",
+    "class-2",
+  ]
+
+  Gtk.BuilderListItemFactory {
+    template ListItem {
+      // <- keyword
+      child: Gtk.Label label {};
+    }
+  }
+
+  Adw.AlertDialog {
+    responses [
+      // <- keyword
+      cancel: _('Cancel'),
+      discard: _('Discard') destructive,
+      save: 'Save' suggested disabled,
+    ]
+  }
+
+  Label label {}
+
+  Adw.Breakpoint {
+    condition ("max-width: 600px")
+    // <- keyword
+    setters {
+      // <- keyword
+      label.label: _("Hello, world!");
+      label.visible: false;
+      label.extra-menu: null;
+    }
+  }
+
+  ComboBoxText box {
+    items [
+      // <- keyword
+      "Hello, world!",
+      _("Hello!"),
+      item_id: "item",
+    ]
+  }
+
+  FileFilter {
+    name: 'File Filter Name';
+
+    mime-types [
+      // <- keyword
+      'text/plain',
+      'image/ *',
+    ]
+
+    patterns [
+      // <- keyword
+      '*.txt',
+    ]
+
+    suffixes [
+      // <- keyword
+      'png',
+    ]
+  }
+
+  Grid {
+    Label {
+      layout {
+        // <- keyword
+        column: 0;
+        row: 1;
+      }
+    }
+  }
+
+  Button button {}
+
+  Scale {
+    marks [
+      // <- keyword
+      mark (-1, bottom),
+      // <- keyword
+      mark (0, top, _('Hello, world!')),
+      // <- keyword
+      mark (2),
+      // <- keyword
+    ]
+  }
+
+  SizeGroup {
+    mode: horizontal;
+    widgets [label, button]
+    // <- keyword
+  }
+
+  StringList greetings {
+    strings [
+      // <- keyword
+      "Hello, world!",
+      _("Hello!"),
+    ]
+  }
+
+  Gio.ListStore {
+    item-type: typeof<GObject.Object>;
+    //         ^ keyword
+  }
+
+}
+
+menu my-menu {
+  // <- keyword
+  submenu {
+    // <- keyword
+    section {
+      // <- keyword
+      label: "test section";
+    }
+
+    item {
+      // <- keyword
+      label: C_("context", "test translated item");
+    }
+
+    item ("test item shorthand 1")
+    // <- keyword
+    item ("test item shorthand 2", "app.test-action")
+    // <- keyword
+    item ("test item shorthand 3", "app.test-action", "test-symbolic")
+    // <- keyword
+  }
+}
+
