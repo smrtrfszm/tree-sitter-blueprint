@@ -32,7 +32,6 @@
   name: (ident) @property)
 (menu_attribute
   name: (ident) @property)
-
 (ext_adw_breakpoint
   object: (ident) @property)
 
@@ -55,6 +54,8 @@
 
 (child_annotation
   child_type: (ident) @attribute)
+
+"internal-child" @attribute
 
 [
   "action"
