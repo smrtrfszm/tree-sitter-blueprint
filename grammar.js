@@ -12,9 +12,9 @@ module.exports = grammar({
       repeat($.using),
       optional($.translation_domain),
       repeat(choice(
-        prec(3, $.template),
-        prec(2, $.menu),
-        prec(1, $.object),
+        $.template,
+        $.menu,
+        $.object,
       )),
     ),
 
@@ -107,10 +107,10 @@ module.exports = grammar({
     object_content: $ => seq(
       '{',
       repeat(choice(
-        prec(4, $.signal),
-        prec(3, $.property),
-        prec(2, $._extension),
-        prec(1, $._child),
+        $.signal,
+        $.property,
+        $._extension,
+        $._child,
       )),
       '}',
     ),
@@ -132,9 +132,9 @@ module.exports = grammar({
       field('name', $.ident),
       ':',
       field('value', choice(
-        prec(3, $.binding),
-        prec(2, $.object_value),
-        prec(1, $.value),
+        $.binding,
+        $.object_value,
+        $.value,
       )),
       ';',
     ),
@@ -190,21 +190,21 @@ module.exports = grammar({
     object_value: $ => $.object,
 
     value: $ => choice(
-      prec(3, $.translated),
-      prec(2, $.flags),
-      prec(1, $.literal),
+      $.translated,
+      $.flags,
+      $.literal,
     ),
 
     translated: $ => choice(
-      prec(2, seq('_', '(', $.quoted, ')')),
-      prec(1, seq(
+      seq('_', '(', $.quoted, ')'),
+      seq(
         'C_',
         '(',
         field('context', $.quoted),
         ',',
         field('string', $.quoted),
         ')',
-      )),
+      ),
     ),
 
     flags: $ => seq(
