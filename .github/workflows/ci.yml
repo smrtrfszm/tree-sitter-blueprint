@@ -31,5 +31,3 @@ jobs:
       - uses: actions/checkout@v4
       - uses: tree-sitter/setup-action/cli@v1
       - uses: tree-sitter/parser-test-action@v2
-        with:
-          test-rust: true
