@@ -87,9 +87,9 @@
 ] @punctuation.delimiter
 
 [
-  "$" 
-  "_" 
-  "C_" 
+  "$"
+  "_"
+  "C_"
 ] @punctuation.special
 
 "using" @keyword.import
