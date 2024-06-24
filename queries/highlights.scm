@@ -94,8 +94,6 @@
 
 "using" @keyword.import
 
-; TODO: internal-child
-
 (binding
   flags: (ident) @constant)
 (ext_adw_dialog_response
