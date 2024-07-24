@@ -135,8 +135,15 @@ module.exports = grammar({
         $.binding,
         $.object_value,
         $.value,
+        $.array_value,
       )),
       ';',
+    ),
+
+    array_value: $ => seq(
+      '[',
+      delimited($.value, ','),
+      ']',
     ),
 
     closure_expression: $ => seq(

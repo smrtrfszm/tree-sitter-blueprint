@@ -332,3 +332,51 @@ Box {
             name: (type_name
               name: (ident))
             content: (object_content)))))))
+
+======================
+Array with one element
+======================
+
+AboutDialog {
+  authors: [1];
+}
+
+---
+
+(source_file
+  (object
+    (type_name
+      (ident))
+    (object_content
+      (property
+        (ident)
+        (array_value
+          (value
+            (literal
+              (integer_literal))))))))
+
+=========================
+Array with multiple value
+=========================
+
+AboutDialog {
+  authors: [1, "string value"];
+}
+
+---
+
+(source_file
+  (object
+    (type_name
+      (ident))
+    (object_content
+      (property
+        (ident)
+        (array_value
+          (value
+            (literal
+              (integer_literal)))
+          (value
+            (literal
+              (quoted))))))))
+
