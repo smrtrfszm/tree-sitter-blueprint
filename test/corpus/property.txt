@@ -380,3 +380,36 @@ AboutDialog {
             (literal
               (quoted))))))))
 
+================================
+Array in accessibility extension
+================================
+
+Box {
+  accessibility {
+    labelled-by: [
+      my_label1,
+      my_label2,
+      my_label3,
+    ];
+  }
+}
+
+---
+
+(source_file
+  (object
+    (type_name
+      (ident))
+    (object_content
+      (ext_accessibility
+        (ident)
+        (array_value
+          (value
+            (literal
+              (ident)))
+          (value
+            (literal
+              (ident)))
+          (value
+            (literal
+              (ident))))))))

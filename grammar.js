@@ -333,7 +333,10 @@ module.exports = grammar({
       repeat(seq(
         field('name', $.ident),
         ':',
-        field('value', $.value),
+        field('value', choice(
+          $.value,
+          $.array_value,
+        )),
         ';',
       )),
       '}',

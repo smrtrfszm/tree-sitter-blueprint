@@ -1578,8 +1578,17 @@
                 "type": "FIELD",
                 "name": "value",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "value"
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "value"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "array_value"
+                    }
+                  ]
                 }
               },
               {
