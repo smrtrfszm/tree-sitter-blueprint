@@ -1019,6 +1019,16 @@
           }
         ]
       },
+      "flags": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
       "handler": {
         "multiple": false,
         "required": true,
@@ -1054,6 +1064,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -1365,10 +1376,6 @@
     "named": false
   },
   {
-    "type": "after",
-    "named": false
-  },
-  {
     "type": "as",
     "named": false
   },
@@ -1482,10 +1489,6 @@
   },
   {
     "type": "suffixes",
-    "named": false
-  },
-  {
-    "type": "swapped",
     "named": false
   },
   {

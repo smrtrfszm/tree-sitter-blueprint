@@ -124,7 +124,7 @@ module.exports = grammar({
       '(',
       optional(field('object', $.ident)),
       ')',
-      repeat(choice('after', 'swapped')),
+      field('flags', repeat($.ident)),
       ';',
     ),
 

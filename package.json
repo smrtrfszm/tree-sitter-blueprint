@@ -27,17 +27,6 @@
     "tree-sitter-cli": "^0.21.0",
     "prebuildify": "^6.0.0"
   },
-  "tree-sitter": [
-    {
-      "scope": "source.blueprint",
-      "file-types": [
-        "blp"
-      ],
-      "highlights": [
-        "queries/highlights.scm"
-      ]
-    }
-  ],
   "files": [
     "grammar.js",
     "binding.gyp",

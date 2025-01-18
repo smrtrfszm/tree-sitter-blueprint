@@ -54,7 +54,8 @@ T {
     content: (object_content
       (signal
         name: (ident)
-	handler: (ident)))))
+	handler: (ident)
+	flags: (ident)))))
 
 ===========
 With all
@@ -74,7 +75,9 @@ T {
       (signal
         name: (ident)
         detail: (ident)
-	handler: (ident)))))
+	handler: (ident)
+	flags: (ident)
+	flags: (ident)))))
 
 ============================
 Legacy without extern syntax
