@@ -413,3 +413,24 @@ Box {
           (value
             (literal
               (ident))))))))
+
+================
+Expression value
+================
+
+BoolFilter {
+  expression: expr true;
+}
+
+---
+
+(source_file
+  (object
+    (type_name
+      (ident))
+    (object_content
+      (property
+        (ident)
+        (expr_value
+          (literal
+            (ident)))))))

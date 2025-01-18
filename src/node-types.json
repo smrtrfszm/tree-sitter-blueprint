@@ -156,6 +156,33 @@
     }
   },
   {
+    "type": "expr_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "cast_expression",
+          "named": true
+        },
+        {
+          "type": "closure_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "lookup_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "ext_accessibility",
     "named": true,
     "fields": {
@@ -979,6 +1006,10 @@
             "named": true
           },
           {
+            "type": "expr_value",
+            "named": true
+          },
+          {
             "type": "object_value",
             "named": true
           },
@@ -1402,6 +1433,10 @@
   {
     "type": "escape_sequence",
     "named": true
+  },
+  {
+    "type": "expr",
+    "named": false
   },
   {
     "type": "float_literal",

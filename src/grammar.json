@@ -577,6 +577,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "expr_value"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "object_value"
               },
               {
@@ -593,6 +597,19 @@
         {
           "type": "STRING",
           "value": ";"
+        }
+      ]
+    },
+    "expr_value": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "expr"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_expression"
         }
       ]
     },

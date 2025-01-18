@@ -133,11 +133,17 @@ module.exports = grammar({
       ':',
       field('value', choice(
         $.binding,
+        $.expr_value,
         $.object_value,
         $.value,
         $.array_value,
       )),
       ';',
+    ),
+
+    expr_value: $ => seq(
+      'expr',
+      $._expression,
     ),
 
     array_value: $ => seq(

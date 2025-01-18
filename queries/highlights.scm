@@ -121,6 +121,7 @@
   "setters"
   "items"
   "as"
+  "expr"
   "mime-types"
   "patterns"
   "suffixes"
