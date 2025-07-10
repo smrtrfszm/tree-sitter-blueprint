@@ -581,6 +581,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "menu"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "object_value"
               },
               {
@@ -2607,5 +2611,6 @@
   "precedences": [],
   "externals": [],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }

@@ -134,6 +134,7 @@ module.exports = grammar({
       field('value', choice(
         $.binding,
         $.expr_value,
+        $.menu,
         $.object_value,
         $.value,
         $.array_value,

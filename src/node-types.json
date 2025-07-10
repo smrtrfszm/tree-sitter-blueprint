@@ -1010,6 +1010,10 @@
             "named": true
           },
           {
+            "type": "menu",
+            "named": true
+          },
+          {
             "type": "object_value",
             "named": true
           },
@@ -1420,7 +1424,8 @@
   },
   {
     "type": "block_comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "condition",
@@ -1472,7 +1477,8 @@
   },
   {
     "type": "line_comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "mark",

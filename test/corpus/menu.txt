@@ -267,3 +267,34 @@ menu id {
         value: (string_value
           (quoted))))))
 
+===========
+Inline menu
+===========
+
+MenuButton {
+  menu-model: menu primary_menu {};
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      name: (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (menu
+          id: (ident))))))
+
+
+===============
+Menu with no id
+===============
+
+menu {}
+
+---
+
+(source_file
+  (menu))
