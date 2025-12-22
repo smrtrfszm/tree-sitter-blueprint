@@ -262,6 +262,38 @@ Box {
             (type_name
               name: (ident))))))))
 
+=======================================
+Closure with translated string argument
+=======================================
+
+Box {
+  a: bind $closure(_("string"));
+  b: bind $closure(C_("context", "string"));
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      name: (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (binding
+          (closure_expression
+            name: (ident)
+              (translated
+                (quoted)))))
+      (property
+        name: (ident)
+        value: (binding
+          (closure_expression
+            name: (ident)
+              (translated
+                context: (quoted)
+                string: (quoted))))))))
+
 ==============================
 Binding with lookup expression
 ==============================

@@ -107,6 +107,11 @@
   (#any-of? @constant.builtin "destructive" "suggested" "disabled"))
 
 [
+  "+"
+  "-"
+] @operator
+
+[
   "template"
   "menu"
   "submenu"
@@ -132,5 +137,7 @@
   "strings"
   "translation-domain"
   "typeof"
+  "offsets"
+  "offset"
 ] @keyword
 

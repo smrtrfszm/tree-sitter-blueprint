@@ -65,6 +65,7 @@ module.exports = grammar({
 
     type_name: $ => choice(
       seq(
+        optional('$'),
         field('namespace', $.ident),
         '.',
         field('name', $.ident)
@@ -185,6 +186,7 @@ module.exports = grammar({
 
     _expression: $ => seq(
       choice(
+        $.translated,
         $.closure_expression,
         $.literal,
         seq('(', $._expression, ')'),
@@ -327,6 +329,7 @@ module.exports = grammar({
       $.ext_file_filter_patterns,
       $.ext_file_filter_suffixes,
       $.ext_layout,
+      $.ext_level_bar_offsets,
       $.ext_list_item_factory,
       $.ext_scale_marks,
       $.ext_size_group_widgets,
@@ -432,6 +435,23 @@ module.exports = grammar({
         ';',
       )),
       '}',
+    ),
+
+    ext_level_bar_offsets: $ => seq(
+      'offsets',
+      '[',
+      delimited($.ext_level_bar_offset, ','),
+      ']',
+    ),
+
+    ext_level_bar_offset: $ => seq(
+      'offset',
+      '(',
+      field('name', $.quoted),
+      ',',
+      optional(choice('-', '+')),
+      field('value', $._number),
+      ')',
     ),
 
     ext_list_item_factory: $ => seq(

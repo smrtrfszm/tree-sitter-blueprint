@@ -48,6 +48,10 @@
         {
           "type": "lookup_expression",
           "named": true
+        },
+        {
+          "type": "translated",
+          "named": true
         }
       ]
     }
@@ -151,6 +155,10 @@
         {
           "type": "lookup_expression",
           "named": true
+        },
+        {
+          "type": "translated",
+          "named": true
         }
       ]
     }
@@ -177,6 +185,10 @@
         },
         {
           "type": "lookup_expression",
+          "named": true
+        },
+        {
+          "type": "translated",
           "named": true
         }
       ]
@@ -413,6 +425,55 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "ext_level_bar_offset",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "quoted",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "float_literal",
+            "named": true
+          },
+          {
+            "type": "hex_literal",
+            "named": true
+          },
+          {
+            "type": "integer_literal",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ext_level_bar_offsets",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "ext_level_bar_offset",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -927,6 +988,10 @@
         },
         {
           "type": "ext_layout",
+          "named": true
+        },
+        {
+          "type": "ext_level_bar_offsets",
           "named": true
         },
         {
@@ -1494,6 +1559,14 @@
   },
   {
     "type": "mime-types",
+    "named": false
+  },
+  {
+    "type": "offset",
+    "named": false
+  },
+  {
+    "type": "offsets",
     "named": false
   },
   {

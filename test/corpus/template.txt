@@ -28,6 +28,22 @@ template $Name {
       name: (ident))
     content: (object_content)))
 
+=======================
+External with namespace
+=======================
+
+template $Namespace.Widget {
+}
+
+---
+
+(source_file
+  (template
+    name: (type_name
+      namespace: (ident)
+      name: (ident))
+    content: (object_content)))
+
 ========================
 Subclass with short name
 ========================

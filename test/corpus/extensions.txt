@@ -221,6 +221,36 @@ Button {
           (literal
             (integer_literal)))))))
 
+================
+LevelBar offsets
+================
+
+LevelBar {
+  offsets [
+    offset ("low-class-name", 0.3),
+    offset ("medium-class-name", +0.5),
+    offset ("high-class-name", -0.7),
+  ]
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      name: (ident))
+    content: (object_content
+      (ext_level_bar_offsets
+        (ext_level_bar_offset
+          name: (quoted)
+          value: (float_literal))
+        (ext_level_bar_offset
+          name: (quoted)
+          value: (float_literal))
+        (ext_level_bar_offset
+          name: (quoted)
+          value: (float_literal))))))
+
 ================================
 BuilderListItemFactory templates
 ================================
