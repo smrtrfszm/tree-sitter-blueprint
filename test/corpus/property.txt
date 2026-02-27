@@ -317,6 +317,30 @@ Box {
           (lookup_expression
             (ident)))))))
 
+==============================
+Binding with try expression
+==============================
+
+Box {
+  title: bind try { Window.name };
+}
+
+---
+
+(source_file
+  (object
+    name: (type_name
+      name: (ident))
+    content: (object_content
+      (property
+        name: (ident)
+        value: (binding
+          (try_expression
+            (literal
+              (ident))
+            (lookup_expression
+              (ident))))))))
+
 ======
 Object
 ======
