@@ -154,6 +154,13 @@ module.exports = grammar({
       ']',
     ),
 
+    try_expression: $ => seq(
+      'try',
+      '{',
+      delimited($._expression, ','),
+      '}',
+    ),
+
     closure_expression: $ => seq(
       '$',
       field('name', $.ident),
@@ -187,6 +194,7 @@ module.exports = grammar({
     _expression: $ => seq(
       choice(
         $.translated,
+        $.try_expression,
         $.closure_expression,
         $.literal,
         seq('(', $._expression, ')'),
